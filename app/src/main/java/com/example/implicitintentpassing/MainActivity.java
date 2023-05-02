@@ -28,7 +28,7 @@ Button btnCall,btnEmail,btnShare,btnSMS;
             public void onClick(View view) {
                 Intent callIntent = new Intent();
                 callIntent.setAction(Intent.ACTION_DIAL);
-                callIntent.setData(Uri.parse("tel: +91 8942980490"));
+                callIntent.setData(Uri.parse("tel: +91 111111111"));
                 startActivity(callIntent);
             }
         });
@@ -39,7 +39,7 @@ Button btnCall,btnEmail,btnShare,btnSMS;
                 Intent emailIntent = new Intent();
                 emailIntent.setAction(Intent.ACTION_SEND);
                 emailIntent.setType("message/rfc822");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"aditriroy2805@gmail.com","atanuroy2006@gmail.com"});
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"xyz@gmail.com","abc@gmail.com"});
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT,"Trial Testing");
                 emailIntent.putExtra(Intent.EXTRA_TEXT,"Please send a ticket, if it working alright!");
                 startActivity(Intent.createChooser(emailIntent,"Email via"));
@@ -51,7 +51,7 @@ Button btnCall,btnEmail,btnShare,btnSMS;
             public void onClick(View view) {
                 Intent smsIntent = new Intent();
                 smsIntent.setAction(Intent.ACTION_SENDTO);
-                smsIntent.setData(Uri.parse("smsto:"+Uri.encode("9476184147")));
+                smsIntent.setData(Uri.parse("smsto:"+Uri.encode("90000000000000")));
                 smsIntent.putExtra("sms_body","Please call me asap");
                 startActivity(smsIntent);
             }
@@ -63,7 +63,7 @@ Button btnCall,btnEmail,btnShare,btnSMS;
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                shareIntent.putExtra(Intent.EXTRA_TEXT,"Download kor na app ta");
+                shareIntent.putExtra(Intent.EXTRA_TEXT,"Download  app ");
                 startActivity(Intent.createChooser(shareIntent,"Email via"));
             }
         });
